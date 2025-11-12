@@ -18,7 +18,9 @@ class Apkeep(Downloader):
     def _run_apkeep(self: Self, package_name: str, version: str = "") -> str:
         """Run apkeep CLI to fetch APK from APKPure."""
         file_name = f"{package_name}.apk"
+        xapk_file_name = f"{package_name}.xapk"
         file_path = self.config.temp_folder / file_name
+        xapk_file_path = self.config.temp_folder / xapk_file_name
         folder_path = self.config.temp_folder / package_name
         zip_path = self.config.temp_folder / f"{package_name}.zip"
 
@@ -35,8 +37,6 @@ class Apkeep(Downloader):
             "apkeep",
             "-a",
             f"{package_name}@{version}" if version and version != "latest" else package_name,
-            "-o",
-            "split_apk=true",
             self.config.temp_folder_name,
         ]
         logger.debug(f"Running command: {cmd}")
@@ -57,6 +57,8 @@ class Apkeep(Downloader):
 
         if file_path.exists():
             return file_name
+        if xapk_file_path.exists():
+            return xapk_file_name
         if folder_path.exists() and folder_path.is_dir():
             # Zip the folder
             with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zipf:
