@@ -68,8 +68,14 @@ class Apkeep(Downloader):
         msg = "APK file or folder not found after apkeep execution."
         raise DownloadError(msg)
 
-    def latest_version(self: Self, app: APP, **kwargs: Any) -> tuple[str, str]:
-        """Download latest version from Google Play via Apkeep."""
+    def specific_version(self: Self, app: "APP", version: str) -> tuple[str, str]:
+        """Download latest version from APKPure via Apkeep."""
         file_name = self._run_apkeep(app.package_name)
         logger.info(f"Got file name as {file_name}")
-        return file_name, f"apkeep://google-play/{app.package_name}"
+        return file_name, f"apkeep://apk-pure/{app.package_name}"
+
+    def latest_version(self: Self, app: APP, **kwargs: Any) -> tuple[str, str]:
+        """Download latest version from APKPure via Apkeep."""
+        file_name = self._run_apkeep(app.package_name)
+        logger.info(f"Got file name as {file_name}")
+        return file_name, f"apkeep://apk-pure/{app.package_name}"
