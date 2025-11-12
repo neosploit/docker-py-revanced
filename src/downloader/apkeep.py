@@ -16,14 +16,7 @@ class Apkeep(Downloader):
     """Apkeep-based Downloader."""
 
     def _run_apkeep(self: Self, package_name: str, version: str = "") -> str:
-        """Run apkeep CLI to fetch APK from Google Play."""
-        email = self.config.env.str("APKEEP_EMAIL")
-        token = self.config.env.str("APKEEP_TOKEN")
-
-        if not email or not token:
-            msg = "APKEEP_EMAIL and APKEEP_TOKEN must be set in environment."
-            raise DownloadError(msg)
-
+        """Run apkeep CLI to fetch APK from APKPure."""
         file_name = f"{package_name}.apk"
         file_path = self.config.temp_folder / file_name
         folder_path = self.config.temp_folder / package_name
@@ -42,12 +35,6 @@ class Apkeep(Downloader):
             "apkeep",
             "-a",
             f"{package_name}@{version}" if version and version != "latest" else package_name,
-            "-d",
-            "google-play",
-            "-e",
-            email,
-            "-t",
-            token,
             "-o",
             "split_apk=true",
             self.config.temp_folder_name,
