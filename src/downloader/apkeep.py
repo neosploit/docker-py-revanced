@@ -17,8 +17,8 @@ class Apkeep(Downloader):
 
     def _run_apkeep(self: Self, package_name: str, version: str = "") -> str:
         """Run apkeep CLI to fetch APK from APKPure."""
-        file_name = f"{package_name}.apk"
-        xapk_file_name = f"{package_name}.xapk"
+        file_name = f"{package_name}@{version}.apk" if version and version != "latest" else f"{package_name}.apk" 
+        xapk_file_name = f"{package_name}@{version}.xapk" if version and version != "latest" else f"{package_name}.xapk" 
         file_path = self.config.temp_folder / file_name
         xapk_file_path = self.config.temp_folder / xapk_file_name
         folder_path = self.config.temp_folder / package_name
