@@ -16,7 +16,15 @@ class Apkeep(Downloader):
     """Apkeep-based Downloader."""
 
     def _run_apkeep(self: Self, package_name: str, version: str = "") -> str:
-        """Run apkeep CLI to fetch APK from APKPure."""
+        """Run apkeep CLI to fetch APK from Google Play / APKPure."""
+        download_source = self.config.env.str("APKEEP_DOWNLOAD_SOURCE")
+        email = self.config.env.str("APKEEP_EMAIL")
+        token = self.config.env.str("APKEEP_TOKEN")
+
+        if download_source == 'google-play' and not email or not token:
+            msg = "APKEEP_EMAIL and APKEEP_TOKEN must be set in environment."
+            raise DownloadError(msg)
+
         file_name = f"{package_name}@{version}.apk" if version and version != "latest" else f"{package_name}.apk" 
         xapk_file_name = f"{package_name}@{version}.xapk" if version and version != "latest" else f"{package_name}.xapk" 
         file_path = self.config.temp_folder / file_name
@@ -34,6 +42,19 @@ class Apkeep(Downloader):
 
         # Build apkeep command
         cmd = [
+            "apkeep",
+            "-a",
+            f"{package_name}@{version}" if version and version != "latest" else package_name,
+            "-d",
+            "google-play",
+            "-e",
+            email,
+            "-t",
+            token,
+            "-o",
+            "split_apk=true",
+            self.config.temp_folder_name,
+        ] if download_source == 'google-play' else [
             "apkeep",
             "-a",
             f"{package_name}@{version}" if version and version != "latest" else package_name,
@@ -74,10 +95,10 @@ class Apkeep(Downloader):
         """Download latest version from APKPure via Apkeep."""
         file_name = self._run_apkeep(app.package_name, version)
         logger.info(f"Got file name as {file_name}")
-        return file_name, f"apkeep://apk-pure/{app.package_name}"
+        return file_name, f"apkeep://{self.config.env.str("APKEEP_DOWNLOAD_SOURCE")}/{app.package_name}"
 
     def latest_version(self: Self, app: APP, **kwargs: Any) -> tuple[str, str]:
         """Download latest version from APKPure via Apkeep."""
         file_name = self._run_apkeep(app.package_name)
         logger.info(f"Got file name as {file_name}")
-        return file_name, f"apkeep://apk-pure/{app.package_name}"
+        return file_name, f"apkeep://{self.config.env.str("APKEEP_DOWNLOAD_SOURCE")}/{app.package_name}"
