@@ -1,1 +1,298 @@
-{}
+{
+    "messenger": {
+        "app_version": "latest",
+        "patches_versions": [
+            "v5.47.0"
+        ],
+        "cli_version": "v5.0.1",
+        "ms_epoch_since_patched": 1766354261219,
+        "date_patched": "2025-12-21 21:57:41.219433+05:30",
+        "app_dump": {
+            "app_name": "messenger",
+            "app_version": "latest",
+            "experiment": false,
+            "cli_dl": "https://github.com/revanced/revanced-cli/releases/latest",
+            "patches_dl_list": [
+                "https://github.com/revanced/revanced-patches/releases/latest"
+            ],
+            "patches_dl": "https://github.com/revanced/revanced-patches/releases/latest",
+            "exclude_request": [],
+            "include_request": [],
+            "resource": {
+                "cli": {
+                    "file_name": "2d7026935af86ae1618510c333c6e98bcd084ac4312ff8fd382414464c601e7f.jar",
+                    "version": "v5.0.1"
+                },
+                "patches": {
+                    "file_name": "4db079c020591878e62b2e7944ae5efddc1e283d809386faa68986e91ac8cb91.rvp",
+                    "version": "v5.47.0"
+                }
+            },
+            "patch_bundles": [
+                {
+                    "name": "patches",
+                    "file_name": "4db079c020591878e62b2e7944ae5efddc1e283d809386faa68986e91ac8cb91.rvp",
+                    "version": "v5.47.0"
+                }
+            ],
+            "no_of_patches": 5,
+            "keystore_name": "revanced.keystore",
+            "archs_to_build": [],
+            "options_file": "options.json",
+            "download_file_name": "com.facebook.orca.apk",
+            "download_dl": "apkeep://google-play/com.facebook.orca",
+            "download_source": "apkeep",
+            "package_name": "com.facebook.orca",
+            "old_key": true,
+            "patches": [],
+            "space_formatted": true
+        }
+    },
+    "proton-mail": {
+        "app_version": "4.15.0",
+        "patches_versions": [
+            "v5.46.0"
+        ],
+        "cli_version": "v5.0.1",
+        "ms_epoch_since_patched": 1763424206798,
+        "date_patched": "2025-11-18 00:03:26.797999+05:30",
+        "app_dump": {
+            "app_name": "proton-mail",
+            "app_version": "4.15.0",
+            "experiment": false,
+            "cli_dl": "https://github.com/revanced/revanced-cli/releases/latest",
+            "patches_dl_list": [
+                "https://github.com/revanced/revanced-patches/releases/latest"
+            ],
+            "patches_dl": "https://github.com/revanced/revanced-patches/releases/latest",
+            "exclude_request": [],
+            "include_request": [],
+            "resource": {
+                "cli": {
+                    "file_name": "2d7026935af86ae1618510c333c6e98bcd084ac4312ff8fd382414464c601e7f.jar",
+                    "version": "v5.0.1"
+                },
+                "patches": {
+                    "file_name": "0d063191bca9fd0c40d8a5fc67292edbd6818e363d9dbd673e9f7779eacd155c.rvp",
+                    "version": "v5.46.0"
+                }
+            },
+            "patch_bundles": [
+                {
+                    "name": "patches",
+                    "file_name": "0d063191bca9fd0c40d8a5fc67292edbd6818e363d9dbd673e9f7779eacd155c.rvp",
+                    "version": "v5.46.0"
+                }
+            ],
+            "no_of_patches": 2,
+            "keystore_name": "revanced.keystore",
+            "archs_to_build": [],
+            "options_file": "options.json",
+            "download_file_name": "ch.protonmail.android@4.15.0.apk",
+            "download_dl": "apkeep://apk-pure/ch.protonmail.android",
+            "download_source": "apkeep",
+            "package_name": "ch.protonmail.android",
+            "old_key": true,
+            "patches": [],
+            "space_formatted": true
+        }
+    },
+    "reddit": {
+        "app_version": "2025.51.0..2551021",
+        "patches_versions": [
+            "v5.47.0"
+        ],
+        "cli_version": "v5.0.1",
+        "ms_epoch_since_patched": 1766354326208,
+        "date_patched": "2025-12-21 21:58:46.207908+05:30",
+        "app_dump": {
+            "app_name": "reddit",
+            "app_version": "2025.51.0..2551021",
+            "experiment": false,
+            "cli_dl": "https://github.com/revanced/revanced-cli/releases/latest",
+            "patches_dl_list": [
+                "https://github.com/revanced/revanced-patches/releases/latest"
+            ],
+            "patches_dl": "https://github.com/revanced/revanced-patches/releases/latest",
+            "exclude_request": [],
+            "include_request": [],
+            "resource": {
+                "cli": {
+                    "file_name": "2d7026935af86ae1618510c333c6e98bcd084ac4312ff8fd382414464c601e7f.jar",
+                    "version": "v5.0.1"
+                },
+                "patches": {
+                    "file_name": "4db079c020591878e62b2e7944ae5efddc1e283d809386faa68986e91ac8cb91.rvp",
+                    "version": "v5.47.0"
+                }
+            },
+            "patch_bundles": [
+                {
+                    "name": "patches",
+                    "file_name": "4db079c020591878e62b2e7944ae5efddc1e283d809386faa68986e91ac8cb91.rvp",
+                    "version": "v5.47.0"
+                }
+            ],
+            "no_of_patches": 4,
+            "keystore_name": "revanced.keystore",
+            "archs_to_build": [],
+            "options_file": "options.json",
+            "download_file_name": "reddit.apk",
+            "download_dl": "https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=11905961&key=c5f400fb8f4f476d876a143dbfed4e72458f42c3",
+            "download_source": "https://www.apkmirror.com/apk/redditinc/reddit/",
+            "package_name": "com.reddit.frontpage",
+            "old_key": true,
+            "patches": [],
+            "space_formatted": true
+        }
+    },
+    "fitnesspal": {
+        "app_version": "24.14.2",
+        "patches_versions": [
+            "v5.46.0"
+        ],
+        "cli_version": "v5.0.1",
+        "ms_epoch_since_patched": 1762975337045,
+        "date_patched": "2025-11-12 19:22:17.044964+05:30",
+        "app_dump": {
+            "app_name": "fitnesspal",
+            "app_version": "24.14.2",
+            "experiment": false,
+            "cli_dl": "https://github.com/revanced/revanced-cli/releases/latest",
+            "patches_dl_list": [
+                "https://github.com/revanced/revanced-patches/releases/latest"
+            ],
+            "patches_dl": "https://github.com/revanced/revanced-patches/releases/latest",
+            "exclude_request": [],
+            "include_request": [],
+            "resource": {
+                "cli": {
+                    "file_name": "2d7026935af86ae1618510c333c6e98bcd084ac4312ff8fd382414464c601e7f.jar",
+                    "version": "v5.0.1"
+                },
+                "patches": {
+                    "file_name": "0d063191bca9fd0c40d8a5fc67292edbd6818e363d9dbd673e9f7779eacd155c.rvp",
+                    "version": "v5.46.0"
+                }
+            },
+            "patch_bundles": [
+                {
+                    "name": "patches",
+                    "file_name": "0d063191bca9fd0c40d8a5fc67292edbd6818e363d9dbd673e9f7779eacd155c.rvp",
+                    "version": "v5.46.0"
+                }
+            ],
+            "no_of_patches": 1,
+            "keystore_name": "revanced.keystore",
+            "archs_to_build": [],
+            "options_file": "options.json",
+            "download_file_name": "com.myfitnesspal.android.apk",
+            "download_dl": "apkeep://apk-pure/com.myfitnesspal.android",
+            "download_source": "apkeep",
+            "package_name": "com.myfitnesspal.android",
+            "old_key": true,
+            "patches": [],
+            "space_formatted": true
+        }
+    },
+    "twitch": {
+        "app_version": "25.3.0",
+        "patches_versions": [
+            "v5.46.0"
+        ],
+        "cli_version": "v5.0.1",
+        "ms_epoch_since_patched": 1762975429058,
+        "date_patched": "2025-11-12 19:23:49.057900+05:30",
+        "app_dump": {
+            "app_name": "twitch",
+            "app_version": "25.3.0",
+            "experiment": false,
+            "cli_dl": "https://github.com/revanced/revanced-cli/releases/latest",
+            "patches_dl_list": [
+                "https://github.com/revanced/revanced-patches/releases/latest"
+            ],
+            "patches_dl": "https://github.com/revanced/revanced-patches/releases/latest",
+            "exclude_request": [
+                "settings"
+            ],
+            "include_request": [],
+            "resource": {
+                "cli": {
+                    "file_name": "2d7026935af86ae1618510c333c6e98bcd084ac4312ff8fd382414464c601e7f.jar",
+                    "version": "v5.0.1"
+                },
+                "patches": {
+                    "file_name": "0d063191bca9fd0c40d8a5fc67292edbd6818e363d9dbd673e9f7779eacd155c.rvp",
+                    "version": "v5.46.0"
+                }
+            },
+            "patch_bundles": [
+                {
+                    "name": "patches",
+                    "file_name": "0d063191bca9fd0c40d8a5fc67292edbd6818e363d9dbd673e9f7779eacd155c.rvp",
+                    "version": "v5.46.0"
+                }
+            ],
+            "no_of_patches": 7,
+            "keystore_name": "revanced.keystore",
+            "archs_to_build": [],
+            "options_file": "options.json",
+            "download_file_name": "tv.twitch.android.app.apk",
+            "download_dl": "apkeep://apk-pure/tv.twitch.android.app",
+            "download_source": "apkeep",
+            "package_name": "tv.twitch.android.app",
+            "old_key": true,
+            "patches": [],
+            "space_formatted": true
+        }
+    },
+    "youtube": {
+        "app_version": "20.14.43",
+        "patches_versions": [
+            "v5.47.0"
+        ],
+        "cli_version": "v5.0.1",
+        "ms_epoch_since_patched": 1766354366989,
+        "date_patched": "2025-12-21 21:59:26.989247+05:30",
+        "app_dump": {
+            "app_name": "youtube",
+            "app_version": "20.14.43",
+            "experiment": false,
+            "cli_dl": "https://github.com/revanced/revanced-cli/releases/latest",
+            "patches_dl_list": [
+                "https://github.com/revanced/revanced-patches/releases/latest"
+            ],
+            "patches_dl": "https://github.com/revanced/revanced-patches/releases/latest",
+            "exclude_request": [],
+            "include_request": [],
+            "resource": {
+                "cli": {
+                    "file_name": "2d7026935af86ae1618510c333c6e98bcd084ac4312ff8fd382414464c601e7f.jar",
+                    "version": "v5.0.1"
+                },
+                "patches": {
+                    "file_name": "4db079c020591878e62b2e7944ae5efddc1e283d809386faa68986e91ac8cb91.rvp",
+                    "version": "v5.47.0"
+                }
+            },
+            "patch_bundles": [
+                {
+                    "name": "patches",
+                    "file_name": "4db079c020591878e62b2e7944ae5efddc1e283d809386faa68986e91ac8cb91.rvp",
+                    "version": "v5.47.0"
+                }
+            ],
+            "no_of_patches": 58,
+            "keystore_name": "revanced.keystore",
+            "archs_to_build": [],
+            "options_file": "options.json",
+            "download_file_name": "youtube.apk",
+            "download_dl": "https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=8988562&key=92aacc4d07d33ea07b994ca20301b4225226e904&forcebaseapk=true",
+            "download_source": "https://www.apkmirror.com/apk/google-inc/youtube/",
+            "package_name": "com.google.android.youtube",
+            "old_key": true,
+            "patches": [],
+            "space_formatted": true
+        }
+    }
+}
