@@ -311,6 +311,19 @@ class Patches(object):
         total_patches, recommended_version = self.get(app=app.app_name)
         experiment = False
 
+        if app.exclude_request:
+            def _is_excluded(patch_name: str) -> bool:
+                check_name = patch_name.lower().replace(" ", "-") if app.space_formatted else patch_name
+                return check_name in app.exclude_request
+
+            recommended_version = "latest"
+            with contextlib.suppress(StopIteration):
+                recommended_version = next(
+                    i["version"]
+                    for i in total_patches
+                    if i["version"] != "all" and not _is_excluded(i["name"])
+                )
+
         if app.app_version:
             logger.debug(f"Picked {app} version {app.app_version:} from env.")
             experiment = self._is_experimental_version(app.app_version, recommended_version)
