@@ -12,3 +12,5 @@ status.md
 apks/*
 *.rvp
 *.backup
+
+.env
