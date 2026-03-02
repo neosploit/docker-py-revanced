@@ -64,5 +64,6 @@ jobs:
       group: Auto-Release-${{ github.head_ref || github.run_id }}
       cancel-in-progress: true
     with:
-      TELEGRAM_NO_ROOT_UPLOAD: true
-      PREFERRED_PATCH_APPS: ${{ needs.release-check.outputs.SHOULD_BUILD }}
+      TELEGRAM_NO_ROOT_UPLOAD: ${{ github.event_name == 'workflow_dispatch' && inputs.TELEGRAM_NO_ROOT_UPLOAD || false }}
+      TELEGRAM_ROOT_UPLOAD:    ${{ github.event_name == 'workflow_dispatch' && inputs.TELEGRAM_ROOT_UPLOAD    || false }}
+      PREFERRED_PATCH_APPS:    ${{ needs.release-check.outputs.SHOULD_BUILD }}
